@@ -26,3 +26,4 @@ class Database{
 // test
 
 module.exports = new Database();
+
