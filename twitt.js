@@ -31,6 +31,7 @@ const registerRoute = require('./routes/registerRoutes');
 const logoutRoute = require('./routes/logout');
 const postRoute = require('./routes/postRoutes');
 const profileRoute = require('./routes/profileRoutes');
+const uploadRoute = require('./routes/uploadRoutes');
 
 
 // Api routes
@@ -42,6 +43,7 @@ twitt.use("/register", registerRoute);
 twitt.use("/logout", logoutRoute);
 twitt.use("/posts", middleware.requireLogin, postRoute);
 twitt.use("/profile", middleware.requireLogin, profileRoute);
+twitt.use("/uploads", uploadRoute);
 
 twitt.use("/api/posts", postsApiRoute);
 twitt.use("/api/users", usersApiRoute);
